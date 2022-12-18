@@ -102,7 +102,6 @@ Philosopher 5 picked up the left fork
 Philosopher 5 picked up the right fork
 Philosopher 1 is going to eat
 Philosopher 2 picked up the left fork
-Philosopher 0 is going to eat
 Philosopher 5 put the right fork
 Philosopher 5 put the loft fork and finished eating
 Philosopher 1 picked up the left fork
@@ -133,4 +132,20 @@ Philosopher 3 is thinking
 ```
 
 ### Двуфазный коммит протокол для high-available регистра
+Результат:
 
+```
+Waiting others clients: []
+Client 1 request commit
+Client 0 request rollback
+Client 2 request rollback
+Client 4 request commit
+Client 3 request commit
+Check clients
+Client 0 do commit
+Client 1 do commit
+Client 2 do commit
+Client 3 do commit
+Client 4 do commit
+Waiting others clients: []
+```
